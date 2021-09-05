@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == mFindWord) {
-            String location = mWordEditText.getText().toString();
+            String word = mWordEditText.getText().toString();
             Intent intent = new Intent(MainActivity.this, WordsActivity.class);
-            intent.putExtra("location", location);
+            intent.putExtra("word", word);
             startActivity(intent);
         }
     }
