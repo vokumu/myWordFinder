@@ -1,6 +1,8 @@
 package com.moringaschool.mywordfinder;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
-
+    public void onClick(View v) {
+        if (v == mFindWord) {
+            String location = mWordEditText.getText().toString();
+            Intent intent = new Intent(MainActivity.this, WordsActivity.class);
+            intent.putExtra("location", location);
+            startActivity(intent);
+        }
     }
 }
