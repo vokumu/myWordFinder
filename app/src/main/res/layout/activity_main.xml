@@ -24,7 +24,7 @@
     />
 
     <EditText
-        android:id="@+id/locationEditText"
+        android:id="@+id/wordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -38,7 +38,7 @@
         android:padding="5dp" />
 
     <Button
-        android:id="@+id/findRestaurantsButton"
+        android:id="@+id/findWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
