@@ -2,13 +2,14 @@ package com.moringaschool.mywordfinder;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
     @BindView(R.id.findWord)
     Button mFindWord;
     @BindView(R.id.wordEditText)
@@ -23,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    @Override
+    public void onClick(View view) {
+
+    }
 }
