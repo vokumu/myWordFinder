@@ -12,6 +12,9 @@ import butterknife.ButterKnife;
 public class WordsActivity extends AppCompatActivity {
 
     @BindView(R.id.wordTextView) TextView mWordTextView;
+    private String[] functions = new String[] {"Related", "Sounds like", "Starts With", "rhyme", "Adjectives describing" };
+    private String[] descriptions = new String[] {"words Related to", "words that sound like your word", "words that start with the input", "words that rhyme with", "adjectives that describe our input" };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
