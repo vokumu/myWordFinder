@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.appNameTextView)
     TextView mAppNameTextView;
 
+
+
+
     private AwesomeValidation awesomeValidation;
 
     @Override
