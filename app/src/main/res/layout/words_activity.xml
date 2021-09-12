@@ -3,20 +3,28 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:padding="8dp"
 tools:context="com.moringaschool.mywordfinder.WordsActivity">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 <TextView
+
+    android:id="@+id/text_view_result"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Restaurants near "
-    android:id="@+id/wordTextView"
+    android:textColor="#000"
     android:layout_marginTop="35dp"/>
 <ListView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/listView"
-    android:layout_below="@+id/wordTextView"
+    android:layout_below="@+id/text_view_result"
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true" />
+
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>
