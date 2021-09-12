@@ -4,8 +4,11 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public interface DataMuseApi {
-    @GET("posts")
-    Call <List<Ryme>> getRymes();
+    @GET("words")
+    Call <List<Ryme>> getRymes(
+            @Query("rel_rhy") String itslef
+    );
 }
