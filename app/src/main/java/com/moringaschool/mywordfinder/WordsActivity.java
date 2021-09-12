@@ -55,7 +55,7 @@ public class WordsActivity extends AppCompatActivity {
                 List<Ryme> rymes = response.body();
                 for (Ryme ryme : rymes) {
                     String content = "";
-                    content += "Word: " + ryme.getWord() + "\n";
+                    content += "\nWord: " + ryme.getWord() + "\n";
                     content += "Score: " + ryme.getScore() + "\n";
                     content += "numSyllables: " + ryme.getNumSyllables() + "\n\n";
                     mWordTextView.append(content);
