@@ -1,4 +1,4 @@
-package com.moringaschool.mywordfinder;
+package com.moringaschool.mywordfinder.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.moringaschool.mywordfinder.ui.MainActivity;
+import com.moringaschool.mywordfinder.R;
 
 public class splachActivity extends AppCompatActivity {
 
