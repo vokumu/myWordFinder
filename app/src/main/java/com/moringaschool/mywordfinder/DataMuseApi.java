@@ -1,5 +1,7 @@
 package com.moringaschool.mywordfinder;
 
+import com.moringaschool.mywordfinder.models.Ryme;
+
 import java.util.List;
 
 import retrofit2.Call;

@@ -1,4 +1,4 @@
- package com.moringaschool.mywordfinder;
+ package com.moringaschool.mywordfinder.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
