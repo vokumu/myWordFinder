@@ -23,10 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText mWordEditText;
     @BindView(R.id.datamuse)
     Button mDataMuse;
-
-
-
-
     private AwesomeValidation awesomeValidation;
 
     @Override
