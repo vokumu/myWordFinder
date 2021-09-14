@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWordFinder" >
         <activity
-            android:name=".WordsActivity">
+            android:name=".models.WordsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.mywordfinder.MainActivity">
+                android:value="com.moringaschool.mywordfinder.ui.MainActivity">
             </meta-data>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/NoActionBarTheme"
             android:exported="true" >
             <intent-filter>
