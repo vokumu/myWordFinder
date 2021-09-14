@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0E0E0E">
+    android:weightSum="7"
+    tools:context=".ui.MainActivity"
+    android:orientation="vertical">
+    <!--top bar-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,53 +35,78 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dashboard"
+            android:text="Home"
             android:textAlignment="textEnd"
             android:textColor="#fafafa"
             android:textSize="14sp" />
     </LinearLayout>
+    <!--Creating the menu grid button-->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="682dp"
-        android:src="@drawable/honney" />
-
-    <TextView
-        android:id="@+id/appNameTextView"
-        android:layout_width="300dp"
-        android:layout_height="114dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:fontFamily="@font/marcellus"
-        android:text="Word Finder"
-        android:textColor="@color/colorTextIcons"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-    />
-
-    <EditText
-        android:id="@+id/wordEditText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:background="@color/colorTextIcons"
-        android:ems="10"
-        android:hint="Enter Phrase"
-        android:inputType="textPersonName"
-        android:padding="5dp" />
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:padding="16dp"
+        >
 
-    <Button
-        android:id="@+id/findWord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
-        android:text="Search Word"
-        android:textColor="@color/colorTextIcons" />
-</android.widget.RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter a word and get the rhyming word  "
+            android:textAlignment="center"
+            android:layout_marginTop="60dp"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/wordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/borders"
+            android:ems="10"
+            android:height="50dp"
+            android:hint="Enter Phrase"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/findWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#A41414"
+            android:text="Search Word"
+            android:textColor="@color/colorTextIcons" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Information in the site is from "
+            android:textAlignment="center"
+            android:layout_marginTop="60dp"
+            android:textColor="#000"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/datamuse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FFF"
+            android:text="Data Muse"
+            android:textColor="#A41414" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
