@@ -1,4 +1,4 @@
-package com.moringaschool.mywordfinder.models;
+package com.moringaschool.mywordfinder.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moringaschool.mywordfinder.models.Ryme;
 import com.moringaschool.mywordfinder.network.DataMuseApi;
 import com.moringaschool.mywordfinder.adapters.MyAdapter;
 import com.moringaschool.mywordfinder.R;
@@ -35,6 +36,7 @@ public class WordsActivity extends AppCompatActivity {
 
     private MyAdapter mAdapter;
 
+
     public List<Ryme> rymes;
 
 
@@ -48,7 +50,7 @@ public class WordsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        String location = intent.getStringExtra("word");
+        String word = intent.getStringExtra("word");
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.datamuse.com/")
@@ -57,7 +59,7 @@ public class WordsActivity extends AppCompatActivity {
 
         dataMuseApi = retrofit.create(DataMuseApi.class);
 
-        Call<List<Ryme>> call = dataMuseApi.getRymes("forgetful");
+        Call<List<Ryme>> call = dataMuseApi.getRymes(word);
         call.enqueue(new Callback<List<Ryme>>() {
             @Override
             public void onResponse(Call<List<Ryme>> call, Response<List<Ryme>> response) {
@@ -84,57 +86,6 @@ public class WordsActivity extends AppCompatActivity {
 
         });
     }
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.words_activity);
-//        ButterKnife.bind(this);
-//        Intent intent = getIntent();
-//        String word = intent.getStringExtra("word");
-//        mWordTextView.setText("The word to be searched: " + word);
-//        recyclerView=findViewById(R.id.recyclerView);
-//
-//        rymeList=new ArrayList<>();
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl("https://api.datamuse.com/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//
-//        dataMuseApi = retrofit.create(DataMuseApi.class);
-//        getRymes();
-//        }
-//    private void getRymes(){
-//        Call<List<Ryme>> call = dataMuseApi.getRymes("forgetful");
-//        call.enqueue(new Callback<List<Ryme>>() {
-//            @Override
-//            public void onResponse(Call<List<Ryme>> call, Response<List<Ryme>> response) {
-//                if (!response.isSuccessful()) {
-//
-//                    mWordTextView.setText("Code: " + response.code());
-//                    return;
-//                }
-//                List<Ryme> rymes = response.body();
-//                rymeList.add(new Ryme("ear",10,11));
-//                MyAdapter adapter=new MyAdapter(rymes);
-//                RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
-//                recyclerView.setLayoutManager(layoutManager);
-//                recyclerView.setItemAnimator(new DefaultItemAnimator());
-//                recyclerView.setAdapter(adapter);
-////                for (Ryme ryme : rymes) {
-////                    String content = "";
-////                    content += "\nWord: " + ryme.getWord() + "\n";
-////                    content += "Score: " + ryme.getScore() + "\n";
-////                    content += "numSyllables: " + ryme.getNumSyllables() + "\n\n";
-////                    mWordTextView.append(content);
-////                }
-//            }
-//            @Override
-//            public void onFailure(Call<List<Ryme>> call, Throwable t) {
-//                mWordTextView.setText(t.getMessage());
-//            }
-//        });
-//    }
 
     private void showFailureMessage() {
         mErrorTextView.setText("Something went wrong. Please check your Internet connection and try again later");
