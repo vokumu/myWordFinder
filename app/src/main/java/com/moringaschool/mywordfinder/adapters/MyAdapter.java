@@ -1,4 +1,4 @@
-package com.moringaschool.mywordfinder;
+package com.moringaschool.mywordfinder.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.moringaschool.mywordfinder.R;
+import com.moringaschool.mywordfinder.models.Ryme;
 
 import java.util.List;
 

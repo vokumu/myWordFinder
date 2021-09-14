@@ -1,4 +1,6 @@
-package com.moringaschool.mywordfinder;
+package com.moringaschool.mywordfinder.network;
+
+import com.moringaschool.mywordfinder.models.Ryme;
 
 import java.util.List;
 

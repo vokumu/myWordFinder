@@ -1,4 +1,4 @@
-package com.moringaschool.mywordfinder;
+package com.moringaschool.mywordfinder.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

@@ -1,4 +1,4 @@
-package com.moringaschool.mywordfinder;
+package com.moringaschool.mywordfinder.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +14,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.google.common.collect.Range;
+import com.moringaschool.mywordfinder.R;
+import com.moringaschool.mywordfinder.models.WordsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
     @BindView(R.id.findWord)
