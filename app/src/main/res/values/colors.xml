@@ -5,13 +5,13 @@
     <color name="colorPrimaryDark">#E64A19</color>
     <color name="colorPrimaryLight">#FFCCBC</color>
     <color name="colorTextIcons">#FFFFFF</color>
-    <color name="colorAccent">#009688</color>
+    <color name="colorAccent">#A41414</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#727272</color>
     <color name="colorDivider">#B6B6B6</color>
-    <color name="purple_200">#1856ed</color>
-    <color name="purple_500">#1856ed</color>
-    <color name="purple_700">#1856ed</color>
+    <color name="purple_200">#A41414</color>
+    <color name="purple_500">#A41414</color>
+    <color name="purple_700">#A41414</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#070707</color>
     <color name="teal_200">#444343</color>
