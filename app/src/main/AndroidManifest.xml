@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWordFinder">
         <activity
-            android:name=".splachActivity"
+            android:name=".ui.splachActivity"
             android:exported="true"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".models.WordsActivity">
+        <activity android:name=".ui.WordsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.moringaschool.mywordfinder.ui.MainActivity"></meta-data>
