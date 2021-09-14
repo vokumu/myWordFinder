@@ -43,7 +43,7 @@ public class SplachScreenActivity extends AppCompatActivity {
       new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplachScreenActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplachScreenActivity.this, DashboardActivity.class);
                 startActivity(intent);
                 finish();
             }
