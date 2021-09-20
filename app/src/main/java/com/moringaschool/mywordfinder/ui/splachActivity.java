@@ -43,7 +43,7 @@ public class splachActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(splachActivity.this, MainActivity.class);
+                Intent intent = new Intent(splachActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
