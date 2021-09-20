@@ -14,9 +14,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.moringaschool.mywordfinder.Constants;
 import com.moringaschool.mywordfinder.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
+    private DatabaseReference mSearchedWordReference;
+
     @BindView(R.id.findWord)
     Button mFindWord;
     @BindView(R.id.wordEditText)
@@ -27,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mSearchedWordReference = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child(Constants.FIREBASE_CHILD_SEARCHED_LOCATION);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -43,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (awesomeValidation.validate()) {
                 Toast.makeText(this, "Validation Successfull", Toast.LENGTH_LONG).show();
                 String word = mWordEditText.getText().toString();
+                saveWordToFirebase(word);
                 Intent intent = new Intent(MainActivity.this, WordsActivity.class);
                 intent.putExtra("word", word);
                 startActivity(intent);
@@ -53,5 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Uri.parse("https://www.datamuse.com/api/"));
             startActivity(webIntent);
         }
+    }
+    public void saveWordToFirebase(String word) {
+        mSearchedWordReference.setValue(word);
     }
 }
