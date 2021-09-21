@@ -30,7 +30,8 @@
             android:text="Word Search"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="match_parent"
@@ -38,7 +39,8 @@
             android:text="Home"
             android:textAlignment="textEnd"
             android:textColor="#fafafa"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:gravity="end" />
     </LinearLayout>
     <!--Creating the menu grid button-->
 
