@@ -9,28 +9,34 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.moringaschool.mywordfinder.R;
+import com.moringaschool.mywordfinder.models.UserHelperClass;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
    TextInputLayout fullName,email,phone,password,confirmPassword;
-   Button register;
+   Button register,backLogin;
 
-    //Button mregisterUser = findViewById(R.id.register);
+   FirebaseDatabase rootNode;
+   DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         register = (Button)findViewById(R.id.register);
+        backLogin = (Button)findViewById(R.id.backLogin);
         fullName = (TextInputLayout) findViewById(R.id.fullName);
         email = (TextInputLayout) findViewById(R.id.email);
         phone = (TextInputLayout) findViewById(R.id.phone);
         password = (TextInputLayout) findViewById(R.id.password);
         confirmPassword = (TextInputLayout) findViewById(R.id.confirmPassword);
         register.setOnClickListener(this);
+        //backLogin.setOnClickListener(this);
     }
     public boolean validateName(){
         String val=fullName.getEditText().getText().toString();
@@ -109,12 +115,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        if (v == register){
-            if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateName())
-            {
+        if (v == register) {
+            if (!validateName() | !validatePassword() | !validatePhone() | !validateEmail() | !validateName()) {
                 return;
             }
+            rootNode=FirebaseDatabase.getInstance();
+            reference=rootNode.getReference("users");
+            //get all the values from the text field
+            String mname = fullName.getEditText().getText().toString();
+            String memail = email.getEditText().getText().toString();
+            String mphone = phone.getEditText().getText().toString();
+            String mpassword = password.getEditText().getText().toString();
+
+            UserHelperClass helperClass=new UserHelperClass(mname,memail,mphone,mpassword);
+            reference.child(mphone).setValue(helperClass);
         }
+            if (v == backLogin) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
     }
 
-}
+    }
