@@ -106,14 +106,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
     }
-    public void registerUser(View view) {
-        if(!validateName() |!validatePassword() | !validatePhone() | !validateEmail() | !validateName())
-        {
-            return;
-        }
-    }
-
-    @Override
+      @Override
     public void onClick(View v) {
         if (v == register) {
             if (!validateName() | !validatePassword() | !validatePhone() | !validateEmail() | !validateName()) {
