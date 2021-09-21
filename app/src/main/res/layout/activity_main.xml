@@ -71,20 +71,7 @@
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/wordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/borders"
-            android:ems="10"
-            android:height="50dp"
-            android:hint="Enter Phrase"
-            android:padding="5dp" />
+
 
         <Button
             android:id="@+id/findWord"
@@ -103,7 +90,8 @@
             android:textAlignment="center"
             android:layout_marginTop="60dp"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:gravity="center_horizontal" />
         <Button
             android:id="@+id/datamuse"
             android:layout_width="match_parent"
