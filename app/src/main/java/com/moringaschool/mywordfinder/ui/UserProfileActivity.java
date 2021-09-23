@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
 
 public class UserProfileActivity extends AppCompatActivity  implements View.OnClickListener {
     TextInputLayout fullName,email,phone;
-    Button search;
+    Button search,history;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,9 @@ public class UserProfileActivity extends AppCompatActivity  implements View.OnCl
         phone=findViewById(R.id.phone);
 
         search = (Button)findViewById(R.id.search);
+        history=(Button)findViewById(R.id.history);
         search.setOnClickListener(this);
+        history.setOnClickListener(this);
         
         //show Data
         showAllUSerData();
@@ -49,6 +51,10 @@ public class UserProfileActivity extends AppCompatActivity  implements View.OnCl
     public void onClick(View view) {
         if(view == search){
             Intent intent = new Intent(UserProfileActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+        if(view==history){
+            Intent intent=new Intent(UserProfileActivity.this,SearchHistoryActivity.class);
             startActivity(intent);
         }
 

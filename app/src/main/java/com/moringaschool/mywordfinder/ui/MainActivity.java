@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.findWord)
     Button mFindWord;
-    @BindView(R.id.wordEditText)
-    EditText mWordEditText;
     @BindView(R.id.datamuse)
     Button mDataMuse;
     private AwesomeValidation awesomeValidation;
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         searchPhrase= (TextInputLayout) findViewById(R.id.searchPhrase);
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
-        awesomeValidation.addValidation(this, R.id.wordEditText, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.worderror);
+       // awesomeValidation.addValidation(this, R.id.wordEditText, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.worderror);
         mFindWord.setOnClickListener(this);
         mDataMuse.setOnClickListener(this);
 

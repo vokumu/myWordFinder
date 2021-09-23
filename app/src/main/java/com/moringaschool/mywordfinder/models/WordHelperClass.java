@@ -14,4 +14,8 @@ public class WordHelperClass {
     public WordHelperClass(String phrase) {
         this.phrase = phrase;
     }
+
+    public  WordHelperClass(){
+
+    }
 }

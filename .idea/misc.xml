@@ -11,10 +11,12 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.10215053763440861" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.16510416666666666" />
+        <entry key="app/src/main/res/layout/activity_search_history.xml" value="0.2759259259259259" />
         <entry key="app/src/main/res/layout/activity_splach.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/activity_splach_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.335" />
         <entry key="app/src/main/res/layout/list_items.xml" value="0.345679012345679" />
+        <entry key="app/src/main/res/layout/single_view_layout.xml" value="0.2759259259259259" />
         <entry key="app/src/main/res/layout/words_activity.xml" value="0.335" />
       </map>
     </option>
