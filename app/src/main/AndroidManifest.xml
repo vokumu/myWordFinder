@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWordFinder">
         <activity
+            android:name=".ui.SearchHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.UserProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.splachActivity"
             android:exported="true"
             android:theme="@style/NoActionBarTheme">
@@ -24,13 +36,12 @@
         <activity android:name=".ui.WordsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.mywordfinder.ui.MainActivity"></meta-data>
+                android:value="com.moringaschool.mywordfinder.ui.MainActivity" />
         </activity>
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:theme="@style/NoActionBarTheme">
-        </activity>
+            android:theme="@style/NoActionBarTheme" />
 
         <meta-data
             android:name="preloaded_fonts"

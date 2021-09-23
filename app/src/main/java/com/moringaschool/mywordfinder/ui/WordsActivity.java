@@ -28,7 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WordsActivity extends AppCompatActivity {
 
-   // @BindView(R.id.text_view_result) TextView mWordTextView;
+    //@BindView(R.id.text_view_result) TextView mWordTextView;
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
     @BindView(R.id.progressBar)
