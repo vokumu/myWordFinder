@@ -6,7 +6,7 @@ words that rhyme with the word and adjectives that describe the word.
 
 ##Screen Shorts
 ##Screen Shorts
-![img.png](img.png) ![img_1.png](img_1.png) 
+![img.png](img.png) 
 
 
 
