@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mFindWord;
     @BindView(R.id.datamuse)
     Button mDataMuse;
+    @BindView(R.id.homeButton)
+    Button homeButton;
     private AwesomeValidation awesomeValidation;
 
     @Override
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        // awesomeValidation.addValidation(this, R.id.wordEditText, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.worderror);
         mFindWord.setOnClickListener(this);
         mDataMuse.setOnClickListener(this);
+        homeButton.setOnClickListener(this);
 
     }
     public boolean validateSearchPhrase(){
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Uri.parse("https://www.datamuse.com/api/"));
             startActivity(webIntent);
         }
+
     }
     public void saveWordToFirebase(String word) {
        // mSearchedWordReference.setValue(word);
