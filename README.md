@@ -5,7 +5,10 @@ This is a simple Android application that allows a user to enter their a word se
 words that rhyme with the word and adjectives that describe the word.
 
 ##Screen Shorts
- ![img_1.png](img_1.png)
+##Screen Shorts
+![img.png](img.png) ![img_1.png](img_1.png) ![img_2.png](img_2.png) ![img_4.png](img_4.png)
+
+
 
 ## Author Information
 [Victoria Okumu](https://github.com/vokumu)
